@@ -5,7 +5,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
     <title>最終課題</title>
 </head>
 <body>
@@ -15,7 +14,6 @@
 <?php
     $pdo=new PDO($connect, USER, PASS);
     $sql=$pdo->prepare('select * from fav');
-    $sql->execute();
     foreach($sql as $row){
         echo $row['image'], '<br>',
              $row['name'], '<br>',

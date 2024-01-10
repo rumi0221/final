@@ -9,10 +9,8 @@ h1 {
 
 .side { /*menu.php*/
     background-color: #fff;
-    width: 100px;
-    height: 200px;
     border-radius: 10px; 
-    text-align: center;
+    margin: auto;
 }
 
 .menu-btn {

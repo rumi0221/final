@@ -8,6 +8,7 @@
 </head>
 <body>
     <div class="home">
+        <h1>推し管理システム</h1>
         <?php require 'menu.php'; ?>
     </div>    
 </body>
