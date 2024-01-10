@@ -1,5 +1,4 @@
 body {
-    display: flex; /*サイドバーとメインコンテンツを横並びにする指定をした。*/
     background-color: #fff8e8;
 }
 
@@ -9,8 +8,10 @@ h1 {
 
 .side { /*menu.php*/
     background-color: #fff;
-    border-radius: 10px; 
+    border-radius: 5px; 
     margin: auto;
+    width: 300px;
+    height: 45px;
 }
 
 .menu-btn {
@@ -29,11 +30,8 @@ h1 {
 }
 
 .main {
-    width: 100%;
-    text-align: center;
-}
-
-.home {
     margin: auto;
     margin-top: 20px;
+    text-align: center;
+
 }

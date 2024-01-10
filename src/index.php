@@ -7,7 +7,7 @@
     <title>最終課題</title>
 </head>
 <body>
-    <div class="home">
+    <div class="main">
         <h1>推し管理システム</h1>
         <?php require 'menu.php'; ?>
     </div>    
