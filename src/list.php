@@ -16,14 +16,15 @@
     $sql=$pdo->prepare('select * from fav');
     $sql->execute();
     foreach($sql as $row){
-        echo '<img src="image/', $row['image'], '">', '<br>',
+        echo '<br>';
+        echo '<img src="img/', $row['image'], '">', '<br>',
              $row['name'], '<br>',
              $row['birthplace'], '<br>',
              $row['birthday'], '<br>';
         $sql2 = $pdo->query('select * from team where team_id = '. $row['team_id']);
         $row2 = $sql2->fetch(PDO::FETCH_BOTH, PDO::FETCH_ORI_LAST);
         echo $row2['team_name'], '<br>',
-             $row2['debutday'],
+             $row2['debutday'], '<br>',
              $row['office'], '<br>';
     }
 ?>

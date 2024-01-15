@@ -13,17 +13,12 @@
         <h1>推し管理システム</h1>
         <?php require 'menu.php'; ?>
         <h3>推し登録</h3>
+        <p>登録されました。</p>
         <?php
             $pdo=new PDO($connect, USER, PASS);
             $sql=$pdo->prepare('insert into fav values(DEFAULT, ?, ?, ?, ?, ?, ?)');
-            $sql->execute([ $_POST['name'], $_POST['birthplace'], $_POST['price'], $_POST['explanation'], $_POST['image'], $_POST['season'], $_POST['stock'] , (int)$_POST['shop_id']]);
+            $sql->execute([ $_POST['name'], $_POST['birthplace'], $_POST['birthday'], (int)$_POST['team_id'], $_POST['office'], $_POST['imaeg']]);
         ?>
-
-                
-            
-            <br>
-            <br>
-            <a href="productlist.php">戻る</a>
     </div>
 </body>
 </html>
