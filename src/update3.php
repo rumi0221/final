@@ -15,9 +15,9 @@
     <?php require 'menu.php'; ?>
     <?php
         $pdo=new PDO($connect, USER, PASS);
-        $sql=$pdo->prepare('update product set product_mei=?, product_type=?, tanka=?, setumei=?, gazou=?, season=?, zaiko=?, shop_code=? where product_id='.(int)$_POST['product_id']);
-        $sql->execute([$_POST['product_name'], $_POST['category'], (int)$_POST['price'], $_POST['explanation'], $_POST['image'], $_POST['season'], (int)$_POST['stock'] , (int)$_POST['shop_id']]);
-    ?>
+        $sql=$pdo->prepare('update fav set (DEFAULT, ?, ?, ?, ?, ?, ?)');
+        $sql->execute([ $_POST['name'], $_POST['birthplace'], $_POST['birthday'], (int)$_POST['team_id'], $_POST['office'], $_POST['image']]);
+   ?>
     <p>情報が更新されました</p>
     </div>
 </body>
