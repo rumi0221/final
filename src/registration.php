@@ -40,12 +40,6 @@
                                 foreach($sql as $row){
                                     echo '<option>', $row['team_name'], '</option>';
                                 }
-                                echo '<input type="hidden" name="team_id" value="';
-                                $pdo=new PDO($connect,USER,PASS);
-                                $sql=$pdo->query('select * from team where team_name like "'. $row['team_name']. '"');
-                                $row = $sql->fetch(PDO::FETCH_BOTH, PDO::FETCH_ORI_LAST);
-                                echo $row['team_id'];
-                                echo '">';
                             ?>
                         </select></td>
                 </tr>

@@ -50,16 +50,10 @@
                                 $sql2=$pdo->query('select * from team');
                                 foreach($sql2 as $row2){
                                     echo '<option>', $row2['team_name'], '</option>';
+
                                 }
                             ?>
-                            <input type="hidden" name="shop_id" value="
-                            <?php
-                                $pdo=new PDO($connect,USER,PASS);
-                                $sql3=$pdo->query('select * from team where team_name like "'. $row2['team_name']. '"');
-                                $row3 = $sql3->fetch(PDO::FETCH_BOTH, PDO::FETCH_ORI_LAST);
-                                echo $row3['team_id'];
-                            ?>
-                            ">
+                            
                         </select></td>
                 </tr>
                 <tr>
